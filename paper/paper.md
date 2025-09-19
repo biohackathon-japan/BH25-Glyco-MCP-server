@@ -88,11 +88,24 @@ To support LLM-based mapping of natural language queries, we designed a structur
 Need to add section of how the actual llm and mcp server operate
 
 # Results
-did not get the chance to integrate pubchem queries in embeddings for llms for the MCP to perform cross source queries
+We implemented a YAML-based mapping of natural language questions to GlyCosmos SPARQList API endpoints, starting with atomic queries. Using these atomic mappings as few-shot training examples, we demonstrated that large language models (LLMs) could correctly interpret natural language inputs and resolve them into valid API calls.
 
-the atomic queries worked great
+Testing with the Claude LLM integrated through the MCP server showed that the system was able to perform atomic queries reliably. For example, questions such as “What is the amino acid sequence of UniProt protein P02873?” or “Show me the glycan image for GlyTouCan ID G00051MO” were successfully translated into the correct API calls, with structured results returned.
 
-and the chain queries worked good too but did not rigousrly test it too much, some issue of walking the llm through the process but it at least got to final result rather than gernating a syntaxitly wrong query and having to iterate multiple times if we had kept the old embedding/few shot design
+We also evaluated chained workflows defined in the chaining YAML. With minimal prompting and guidance, Claude was able to execute multi-step queries such as:
+
+“Find information about epitope EP0007, including its glycan image and external database links.”
+
+Step 1: Call Glyco Epitope (get GlyTouCan ID) with epitopeID=EP0007 → returns the corresponding GlyTouCan ID.
+
+Step 2: Call Get image data from GlyTouCan with the returned GlyTouCan ID → retrieves a glycan structure image in SNFG notation.
+
+Step 3: Call External ID from GlyTouCan with the same GlyTouCan ID → retrieves cross-references to external databases (e.g., KEGG, GlyGen, UniCarb-DB, BCSDB).
+
+This confirmed that chaining atomic API calls is a feasible and robust alternative to constructing brittle federated SPARQL queries.
+
+However, integration of PubChem queries directly into the MCP embeddings was not achieved during the hackathon timeframe. While PubChem collaborators provided federated query examples, we did not succeed in embedding these cross-source workflows for automatic use by the LLM. Consequently, our current workflows are restricted to GlyCosmos endpoints, with cross-database queries identified as a priority for future work.
+
 # Discussion
 
 # Future Directions
