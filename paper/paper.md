@@ -75,7 +75,7 @@ Our team approached this project as relative newcomers to Model Context Protocol
 
 We began by defining a set of use cases that would be feasible for mapping natural language queries to SPARQL endpoints. This required some background knowledge of glycans, biology, and the organization of GlyCosmos and PubChem resources. Initially, we experimented with complex chain queries targeted at specific biological questions (e.g., disease -> gene -> glycan -> PubChem compound). In this phase, our collaborators from PubChem contributed by sharing federated query examples to map to the natural language question use cases we determined were relevant for researchers.
 
-While promising in principle, this approach quickly revealed several limitations. Current large language models and tooling are not yet reliable for generating consistent accurate SPARQL syntax [@discusses:citesAsEvidence:doi:10.48550/arXiv.2508.10467], and the structure of GlyCosmos itself spread across more than 150 RDF graphs. With this approach of mapping complex chained federated queries directly to natural language, large language models would only be capable of reproducing queries within the same narrow scope, severely limiting their ability to handle queries outside those predefined during the embedding process. 
+While promising in principle, this approach quickly revealed several limitations. Current large language models and tooling are not yet reliable for generating consistent accurate SPARQL syntax [@discusses:citesAsEvidence:Pan2025FIRESPARQL], and the structure of GlyCosmos itself spread across more than 150 RDF graphs. With this approach of mapping complex chained federated queries directly to natural language, large language models would only be capable of reproducing queries within the same narrow scope, severely limiting their ability to handle queries outside those predefined during the embedding process. 
 
 Consequently, we decided to turn to the GlyCosmos SPARQLlist API endpoints as an alternative. The advantage of using these endpoints is that they provide modular, predefined queries that act as atomic building blocks. By creating natural language mappings for each atomic query, we would create a consistent way to translate natural language questions into API calls. Once these atomic mappings were defined, they could be combined into chain mappings, allowing us to construct more complex workflows as we documeneted more releveant predefined queries.
 
@@ -100,3 +100,15 @@ did not
 ...
 
 ## References
+references:
+  - id: Pan2025FIRESPARQL
+    title: "FIRESPARQL: A LLM-based Framework for SPARQL Query Generation over Scholarly Knowledge Graphs"
+    authors:
+      - name: Xueli Pan
+      - name: Victor de Boer
+      - name: Jacco van Ossenbruggen
+    year: 2025
+    publisher: arXiv
+    journal: "Proceedings of the 17th International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management (IC3K)"
+    doi: 10.48550/arXiv.2508.10467
+    url: https://doi.org/10.48550/arXiv.2508.10467
