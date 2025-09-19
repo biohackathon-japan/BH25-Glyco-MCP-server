@@ -1,10 +1,13 @@
 ---
-title: 'DBCLS BioHackathon 2025 report: Template for the very long title'
-title_short: 'BioHackJP25: How we found breakfast'
+title: 'DBCLS BioHackathon 2025 report: Natural Language to SPARQL Workflows for Glyco Data Integration using GlyCosmos and PubChem APIs via the MCP Server'
+title_short: 'BioHackJP25: Natural Language Queries to GlyCosmos & PubChem'
 tags:
   - Semantic web
+  - SPARQL
   - Ontologies
   - Workflows
+  - MCP
+  - LLM
 authors:
   - name: First Author
     orcid: 0000-0000-0000-0000
@@ -51,7 +54,7 @@ authors_short: First Author \emph{et al.}
 
 # Introduction
 
-As part of the DBCLS BioHackathon 2025, we here report on behalf on the Glyco MCP server project team. The aim of this project was to investigate how MCPs (Model Context Protocols) can be applied to GlyCosmos, and integrated glycan-related data such as structures, synthesis genes, glycoproteins, and glycolipids through extensive SPARQList resources, with the aim of enabling natural language access to these datasets.
+As part of the DBCLS BioHackathon 2025, we are here to report on behalf on the Glyco MCP server project team. The aim of this project was to investigate how MCPs (Model Context Protocols) can be applied to facilitate the reserach query process between GlyCosmos and PubChem. By integrating glycan-related data (structures, synthesis genes, glycoproteins, and glycolipids) through extensive SPARQList resources, we aim to of enable natural language access to these datasets.
 
 ## Author information
 
