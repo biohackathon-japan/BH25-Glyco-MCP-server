@@ -10,15 +10,15 @@ tags:
   - MCP
   - LLM
 authors:
-  - name: First Author
-    orcid: 0000-0000-0000-0000
+    - name: Akira R. Kinjo
+    orcid: 0000-0002-4006-8208
     affiliation: 1
-  - name: Second Author
+  - name: Last Author
     orcid: 0000-0000-0000-0000
     affiliation: 2
-  - name: Third Author
-    orcid: 0000-0000-0000-0000
-    affiliation: 1
+  - name: Issaku Yamada
+    orcid: 0000-0001-9504-189X
+    affiliation: 3
   - name: Miguel Mazumder
     orcid: 0000-0003-1181-8118
     affiliation: 2
@@ -36,6 +36,9 @@ affiliations:
     index: 1
   - name: Soka University
     index: 2
+  - name: The Noguchi Institute
+    index: 3
+
 date: 19 September 2025
 cito-bibliography: paper.bib
 event: BH25JP
