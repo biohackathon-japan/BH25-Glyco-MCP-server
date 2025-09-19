@@ -71,11 +71,12 @@ To address this gap between glyco researchers and complex retrieval of informati
 Our work demonstrates how MCP servers can serve as a middleware layer than translates researcher-freindly natural language queries into SPARQL queries via SPARQList endpoints, enabling for a more robust integration acrses GlyCosmos and PubChem resources.
 
 # Methodology
-Our team approached this project as relative newcomers to Model Context Protcols (MCPs), SPARQL queries, and RDF data integration. 
+Our team approached this project as relative newcomers to Model Context Protocols (MCPs), SPARQL queries, RDF data integration, and GlyCosmos as well. With very limited prior experience in these areas, our first step was to explore the existing GlyCosmos SPARQL queries PIs in order to understand what is expected for this natural langauge to SPARQL queries process.
 
-To lower the barrier
+We began by defining a set of use cases that would be feasible for mapping natural language queries to SPARQL endpoints. This required some background knowledge of glycans, biology, and the organization of GlyCosmos and PubChem resources. Initially, we experimented with complex chain queries targeted at specific biological questions (e.g., disease → gene → glycan → PubChem compound). While promising in principle, this approach quickly revealed several limitations: current large language models and tooling are not yet reliable for generating accurate SPARQL syntax, and the structure of GlyCosmos itself — spread across more than 150 RDF graphs — makes automated query generation especially challenging.
 
-With no very limited experience iwth Glycosmos, exploring the existing GlyCosmos SPARQList APIs was necessary to understand the predefines SPARQL queries available for mapping. An obstacle during this process is that of the 373 SPARQList API endpoints, only 81 are avavilable. 
+So in parallel we also tested the GlyCosmos SPARQList APIs to determine the predefined SPARQL queries available for mapping. During this exploration, we discoverd an major issue. THere are a total of 373 SPARQList API endpoints, and only 89 are available for mapping. Of the non-functional APIs, 43 sparqlist queries reference outdated graphs and 246 of the apis return address errors are are unusable. Consequently, our work focused only on the subset of APIS that could return valid data.
+
 
 # Results
 
