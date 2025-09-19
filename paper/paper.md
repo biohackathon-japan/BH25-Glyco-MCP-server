@@ -51,7 +51,7 @@ authors_short: First Author \emph{et al.}
 
 # Introduction
 
-As part of the DBCLS BioHackathon 2025, we here report...
+As part of the DBCLS BioHackathon 2025, we here report on behalf on the Glyco MCP server project team. The aim of this project was to investigate how MCPs (Model Context Protocols) can be applied to GlyCosmos, and integrated glycan-related data such as structures, synthesis genes, glycoproteins, and glycolipids through extensive SPARQList resources, with the aim of enabling natural language access to these datasets.
 
 ## Author information
 
