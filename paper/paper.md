@@ -48,7 +48,7 @@ biohackathon_name: "DBCLS BioHackathon 2025"
 biohackathon_url:   "https://2025.biohackathon.org/"
 biohackathon_location: "Mie, Japan, 2025"
 group: Glyco MCP Server
-# URL to project git repo --- should contain the actual paper.md:
+# URL to project git repo should contain the actual paper.md:
 git_url: [https://github.com/biohackathon-japan/bh25-bhxiv-template](https://github.com/biohackathon-japan/BH25-Glyco-MCP-server)
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
@@ -88,6 +88,8 @@ To support LLM-based mapping of natural language queries, we designed a structur
 Need to add section of how the actual llm and mcp server operate
 
 # Results
+
+## MCP Server testing
 We implemented a YAML-based mapping of natural language questions to GlyCosmos SPARQList API endpoints, starting with atomic queries. Using these atomic mappings as few-shot training examples, we demonstrated that large language models (LLMs) could correctly interpret natural language inputs and resolve them into valid API calls.
 
 Testing with the Claude LLM integrated through the MCP server showed that the system was able to perform atomic queries reliably. For example, questions such as “What is the amino acid sequence of UniProt protein P02873?” or “Show me the glycan image for GlyTouCan ID G00051MO” were successfully translated into the correct API calls, with structured results returned.
@@ -96,15 +98,19 @@ We also evaluated chained workflows defined in the chaining YAML. With minimal p
 
 “Find information about epitope EP0007, including its glycan image and external database links.”
 
-Step 1: Call Glyco Epitope (get GlyTouCan ID) with epitopeID=EP0007 → returns the corresponding GlyTouCan ID.
+1: Call Glyco Epitope (get GlyTouCan ID) with epitopeID=EP0007 → returns the corresponding GlyTouCan ID.
 
-Step 2: Call Get image data from GlyTouCan with the returned GlyTouCan ID → retrieves a glycan structure image in SNFG notation.
+2: Call Get image data from GlyTouCan with the returned GlyTouCan ID → retrieves a glycan structure image in SNFG notation.
 
-Step 3: Call External ID from GlyTouCan with the same GlyTouCan ID → retrieves cross-references to external databases (e.g., KEGG, GlyGen, UniCarb-DB, BCSDB).
+3: Call External ID from GlyTouCan with the same GlyTouCan ID → retrieves cross-references to external databases (KEGG, GlyGen, UniCarb-DB).
 
-This confirmed that chaining atomic API calls is a feasible and robust alternative to constructing brittle federated SPARQL queries.
+This confirmed that chaining atomic API calls is a feasible and robust alternative to constructing strictly structured federated SPARQL queries.
 
-However, integration of PubChem queries directly into the MCP embeddings was not achieved during the hackathon timeframe. While PubChem collaborators provided federated query examples, we did not succeed in embedding these cross-source workflows for automatic use by the LLM. Consequently, our current workflows are restricted to GlyCosmos endpoints, with cross-database queries identified as a priority for future work.
+However, integration of PubChem queries directly into the MCP embeddings was not achieved during the hackathon timeframe. While PubChem collaborators provided federated query examples, we did not succeed in embedding these cross-source workflows with the atomic api descriptiopn and language mapping used by the LLM for Glycosmos API calls. As a result, our current workflows are restricted to GlyCosmos endpoints, with cross-database queries identified as a priority for future work.
+
+## GLycosmos API Documentation
+
+## Use case Documentation
 
 # Discussion
 
