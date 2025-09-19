@@ -38,7 +38,8 @@ affiliations:
   - name: First Affiliation
     index: 1
   - name: Soka University
-    index 2
+    index: 2
+
     
 date: 19 September 2025
 cito-bibliography: paper.bib
