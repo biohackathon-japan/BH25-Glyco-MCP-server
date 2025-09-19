@@ -73,18 +73,26 @@ Our work demonstrates how MCP servers can serve as a middleware layer than trans
 # Methodology
 Our team approached this project as relative newcomers to Model Context Protocols (MCPs), SPARQL queries, RDF data integration, and GlyCosmos as well. With very limited prior experience in these areas, our first step was to explore the existing GlyCosmos SPARQL queries PIs in order to understand what is expected for this natural langauge to SPARQL queries process.
 
-We began by defining a set of use cases that would be feasible for mapping natural language queries to SPARQL endpoints. This required some background knowledge of glycans, biology, and the organization of GlyCosmos and PubChem resources. Initially, we experimented with complex chain queries targeted at specific biological questions (e.g., disease → gene → glycan → PubChem compound). While promising in principle, this approach quickly revealed several limitations: current large language models and tooling are not yet reliable for generating accurate SPARQL syntax, and the structure of GlyCosmos itself — spread across more than 150 RDF graphs — makes automated query generation especially challenging.
+We began by defining a set of use cases that would be feasible for mapping natural language queries to SPARQL endpoints. This required some background knowledge of glycans, biology, and the organization of GlyCosmos and PubChem resources. Initially, we experimented with complex chain queries targeted at specific biological questions (e.g., disease -> gene -> glycan -> PubChem compound). In this phase, our collaborators from PubChem contributed by sharing federated query examples to map to the natural language question use cases we determined were relevant for researchers.
+
+While promising in principle, this approach quickly revealed several limitations. Current large language models and tooling are not yet reliable for generating consistent accurate SPARQL syntax [@discusses:citesAsEvidence:doi:10.48550/arXiv.2508.10467], and the structure of GlyCosmos itself spread across more than 150 RDF graphs. With this approach of mapping complex chained federated queries directly to natural language, large language models would only be capable of reproducing queries within the same narrow scope, severely limiting their ability to handle queries outside those predefined during the embedding process. 
+
+Consequently, we decided to turn to the GlyCosmos SPARQLlist API endpoints as an alternative. The advantage of using these endpoints is that they provide modular, predefined queries that act as atomic building blocks. By creating natural language mappings for each atomic query, we would create a consistent way to translate natural language questions into API calls. Once these atomic mappings were defined, they could be combined into chain mappings, allowing us to construct more complex workflows as we documeneted more releveant predefined queries.
 
 So in parallel we also tested the GlyCosmos SPARQList APIs to determine the predefined SPARQL queries available for mapping. During this exploration, we discoverd an major issue. THere are a total of 373 SPARQList API endpoints, and only 89 are available for mapping. Of the non-functional APIs, 43 sparqlist queries reference outdated graphs and 246 of the apis return address errors are are unusable. Consequently, our work focused only on the subset of APIS that could return valid data.
 
 
 # Results
-
+did not get the chance to integrate pubchem queries in embeddings for llms for the MCP to perform cross source queries
 # Discussion
 
 # Future Directions
 
 Beyond programmatic integration, the project alsoexplored outreach to experimental reserachers. Glycan projdcts used in laborites while avialble from many companies, often have unclear information where a given glycan can be purcahsed. With integration 
+
+talk about documentaiton of working and outdated sparql api list
+
+did not 
 ...
 
 ## Acknowledgements
