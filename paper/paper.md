@@ -101,6 +101,8 @@ This confirmed that chaining atomic API calls is a feasible and robust alternati
 However, integration of PubChem queries directly into the MCP embeddings was not achieved during the hackathon timeframe. While PubChem collaborators provided federated query examples, we did not succeed in embedding these cross-source workflows with the atomic api descriptiopn and language mapping used by the LLM for Glycosmos API calls. As a result, our current workflows are restricted to GlyCosmos endpoints, with cross-database queries identified as a priority for future work.
 
 ## GLycosmos API Documentation
+As part of our evaluation, we systematically tested all 373 GlyCosmos SPARQList API endpoints. Each endpoint was categorized into one of three states, Working (87 endpoints), Outdated query (43 endpoints) and Error (246 endpoints). This documentation provides both a snapshot of the current functionality of GlyCosmos APIs and a roadmap for maintenance. For our project, only the 81 working endpoints can currently be incorporated into the atomic YAML mappings. By explicitly recording endpoint status, we established a foundation of few-shot learning examples for LLMs and API maintenance and extension.
+This audit not only supported our hackathon goals but also improving the broader GlyCosmos community, as future work can build upon this curated lists for imrpoved SPARQList endpoint maintenance and expansion
 
 ## Use case Documentation
 
