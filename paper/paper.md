@@ -57,18 +57,16 @@ authors_short: Mazumder M., Priscilla J. \emph{et al.}
 
 # Introduction
 
-As part of the DBCLS BioHackathon 2025, we are here to report on behalf on the Glyco MCP server project team. The aim of this project was to investigate how MCPs (Model Context Protocols) can be applied to facilitate the reserach query process between GlyCosmos and PubChem. By integrating glycan-related data (structures, synthesis genes, glycoproteins, and glycolipids) through extensive SPARQList resources, we aim to of enable natural language access to these datasets.
+As part of the DBCLS BioHackathon 2025, we are here to report on behalf on the Glyco MCP server project team. The aim of this project is to investigate how MCPs (Model Context Protocols) can be applied to facilitate the research query process between GlyCosmos and PubChem. By integrating glycan-related data (structures, synthesis genes, glycoproteins, and glycolipids) through extensive SPARQList resources, we aim to enable natural language access to these datasets. This approach lowers the barrier for researchers unfamiliar with SPARQL or RDF, while supporting reproducible and modular workflows.
 
-## Author information
+While GlyCosmos provides rich programmatic access to glycans, genes, glycoprotiens and related information through SPAQRL queries and SPARQList endpoints, practical use of this access requires detailed knowledge of their parameters, query syntax, and JSON outputs. Similarity, while PubCHem offers chemical identifies and structures through its own APIs, integrating these with glycoinformatics resources requries writing multi-step federated queries in SPARQL or custom scripts. For many researchers with biology or chemistry background, this can appear as a steep learning curve with high risk of fragile workflows. For example, there are 150 GRAPHS
 
-Information about the authors is given in the [YAML](https://en.wikipedia.org/wiki/YAML) format at the top of this template.
-For authors you provide their names, their affiliations, and ideally their [ORCID](https://orcid.org/)
-identifier. For affiliations, the [Research Organization Registry](https://ror.org/) (ROR) identifier can be given.
-For example, this is the author information for this template:
+As a result, users will often default to manual browsing of GlyCosmos or GlyTouCan web portals. While these interfaces are valauable for preliminary explorartoy serachers, they have little flexicy when reseracheds need to perform specific actions such as :
+- chain multiple queries (e.g disease -> gene -> glycan -> PubChem ID)
+- retreive structued outputs as scale
+- apply the same query across multiple different IDs
 
-* 
-# Background
-
+To address this gap between glyco reserachers and complex retrieval of information from Glycosmos, 
 # Results
 
 
