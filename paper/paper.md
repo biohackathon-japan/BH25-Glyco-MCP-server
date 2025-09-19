@@ -39,6 +39,7 @@ affiliations:
     index: 1
   - name: Soka University
     index 2
+    
 date: 19 September 2025
 cito-bibliography: paper.bib
 event: BH25JP
@@ -64,20 +65,6 @@ For authors you provide their names, their affiliations, and ideally their [ORCI
 identifier. For affiliations, the [Research Organization Registry](https://ror.org/) (ROR) identifier can be given.
 For example, this is the author information for this template:
 
-```yaml
-authors:
-  - name: First Author
-    affiliation: 1
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
-    affiliation: 2
-affiliations:
-  - name: First Affiliation
-    index: 1
-  - name: ELIXIR Europe
-    ror: 044rwnt51
-    index: 2
-```
 * 
 # Background
 
