@@ -10,34 +10,36 @@ tags:
   - MCP
   - LLM
 authors:
-    - name: Akira R. Kinjo
+  - name: Miguel Mazumder
+    orcid: 0000-0003-1181-8118
+    affiliation: 5
+  - name: Akira R. Kinjo
     orcid: 0000-0002-4006-8208
     affiliation: 1
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
+  - name: Yasunori Yamamoto
+    orcid: 0000-0002-6943-6887
     affiliation: 2
   - name: Issaku Yamada
     orcid: 0000-0001-9504-189X
     affiliation: 3
-  - name: Miguel Mazumder
-    orcid: 0000-0003-1181-8118
+  - name: Masae Hosoda
+    orcid: 0000-0002-4750-4041
     affiliation: 2
-  - name: NAME
-    orcid: 0000-0000-0000-0000
-    affiliation: 2
-  - name: NAME
-    orcid: 0000-0000-0000-0000
-    affiliation: 2
-  - name: NAME
-    orcid: 0000-0000-0000-0000
-    affiliation: 2
+  - name: Priscilla Joanne
+    affiliation: 4 
+
 affiliations:
-  - name: First Affiliation
+  - name: Anima Machina, G.K.
     index: 1
-  - name: Soka University
+  - name: Database Center for Life Science, ROIS-DS
     index: 2
   - name: The Noguchi Institute
     index: 3
+  - name: The University of Tokyo
+    ror: 057zh3y96
+    index: 4
+  - name: The Noguchi Institute
+    index: 5
 
 date: 19 September 2025
 cito-bibliography: paper.bib
