@@ -119,11 +119,11 @@ One limitation is that the API only allows for one input at a time. For the exam
 
 # Future Directions
 
-Beyond programmatic integration, the project alsoexplored outreach to experimental reserachers. Glycan projdcts used in laborites while avialble from many companies, often have unclear information where a given glycan can be purcahsed. With integration 
+Beyond programmatic integration, the project also explored outreach to experimental reserachers. Glycan projdcts used in laboratories while available from many companies, often have unclear information where a given glycan can be purcahsed. With integration of natural langauge questions to glycan purchase information could facilitate this process for researchers and scientists.
 
-talk about documentaiton of working and outdated sparql api list
+talk about documentaiton of working and outdated sparql api list, and continue adding to use case list
 
-did not 
+did not create atmoic queries for Pubchem but that will be to create natural language mapping to their PUG-REST and PubChemRDF REST endpoints.
 ...
 
 ## Acknowledgements
